@@ -6,7 +6,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.contains;
+
 
 public class Pet {
     //Atributos
@@ -27,16 +31,22 @@ public class Pet {
     @Test  // identifica o método como um teste para o testng
     public void incluirPet() throws IOException {
         String jsonBody = lerJson("db/pet1.json");
+//--- estrutura do resassure ---
 
         given()         //Dado
-                .contentType("application/json")
-                .log().all()
-                .body(jsonBody)
+                .contentType("application/json")  // tipo de dado que vai usar
+                .log().all()         //aqui vai logar tudo
+                .body(jsonBody)      // insere o corpo do json
         .when()          //Quando
-                .post(uri)
+                .post(uri)       // aqui chama o endereço e passa os dados do body
         .then()         //Então
-                .log().all()
-                .statusCode(200)
+                .log().all()    //aqui mostra o retorno do que aconteceu
+                .statusCode(200)    // aqui mostra o status code 200
+                .body("name", is("Kiara"))
+                .body("status", is("available"))
+                .body("category.name", is("dog"))
+                .body("tags.name", contains("sta"))
+
         ;
 
     }
