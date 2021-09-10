@@ -1,0 +1,19 @@
+
+{
+  "id": 20022020,
+  "category": {
+    "id": 1,
+      "name": "AX2345LORT"
+  },
+  "name": "Kiara",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 20210812,
+      "name": "data"
+    }
+  ],
+  "status": "sold"
+}

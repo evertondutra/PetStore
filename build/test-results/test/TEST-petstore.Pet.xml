@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.Pet" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-09-10T04:54:46" hostname="DESKTOP-M3JN9B9" time="3.852">
+<testsuite name="petstore.Pet" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-09-10T05:13:51" hostname="DESKTOP-M3JN9B9" time="4.934">
   <properties/>
-  <testcase name="incluirPet" classname="petstore.Pet" time="2.81"/>
-  <testcase name="consultarPet" classname="petstore.Pet" time="1.039"/>
+  <testcase name="incluirPet" classname="petstore.Pet" time="3.042"/>
+  <testcase name="consultarPet" classname="petstore.Pet" time="0.943"/>
+  <testcase name="alterarPet" classname="petstore.Pet" time="0.946"/>
   <system-out><![CDATA[Request method:	POST
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
@@ -34,7 +35,7 @@ Body:
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Fri, 10 Sep 2021 04:54:50 GMT
+Date: Fri, 10 Sep 2021 05:13:54 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -74,7 +75,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Fri, 10 Sep 2021 04:54:51 GMT
+Date: Fri, 10 Sep 2021 05:13:56 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -102,6 +103,64 @@ Server: Jetty(9.2.9.v20150224)
     "status": "available"
 }
 O token é  AX2345LORT
+Request method:	PUT
+Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 20022020,
+    "category": {
+        "id": 1,
+        "name": "AX2345LORT"
+    },
+    "name": "Kiara",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 20210812,
+            "name": "data"
+        }
+    ],
+    "status": "sold"
+}
+HTTP/1.1 200 OK
+Date: Fri, 10 Sep 2021 05:13:57 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 20022020,
+    "category": {
+        "id": 1,
+        "name": "AX2345LORT"
+    },
+    "name": "Kiara",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 20210812,
+            "name": "data"
+        }
+    ],
+    "status": "sold"
+}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
